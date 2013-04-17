@@ -67,4 +67,6 @@
 `.add('state-name', callback)`:添加状态;
 
 `.active('state-name')`:执行状态;
+
+`.exec()`:执行状态;
   
