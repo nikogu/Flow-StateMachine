@@ -7,20 +7,20 @@
 举一个简单的例子:
 >我点击一个按钮，点击第一次显示1，点击第二次显示'hello world'，点击第3次显示'你好';
 一个简单的程序如下:
-  var sign = 0;
-  $(btn).click(function(){
-    if ( sign === 0 ) {
-      alert(1);
-    } else if ( sign === 1 ) {
-      alert('hello world');
-    } else if ( sign === 2 ) {
-      alert('你好');
-    }
+    var sign = 0;
+    $(btn).click(function(){
+      if ( sign === 0 ) {
+        alert(1);
+      } else if ( sign === 1 ) {
+        alert('hello world');
+      } else if ( sign === 2 ) {
+        alert('你好');
+      }
     
-    if ( ++sign > 2 ) {
-      sign = 0;
-    }
-  });
+      if ( ++sign > 2 ) {
+        sign = 0;
+      }
+    });
 虽然例子很简单，但是却反映出日常开发中很多时候我们需要用`信号量`来判断状态，这在状态很多的时候会很繁琐，所以...流程状态机就产生了。
 
 ###用法
