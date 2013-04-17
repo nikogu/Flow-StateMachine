@@ -62,5 +62,9 @@
 ###手册
 `.empty()`:清空所有状态;
 
-`.goto(state-name)`:直接跳到此状态;
+`.goto('state-name')`:直接跳到此状态;
+
+`.add('state-name', callback)`:添加状态;
+
+`.active('state-name')`:执行状态;
   
