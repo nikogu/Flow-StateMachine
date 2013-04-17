@@ -8,8 +8,9 @@
 
         //init
         for ( var prop in conf ) {
-            if ( conf.hasOwnProperty(prop)) continue;
-            this[prop] = conf[prop];
+            if ( conf.hasOwnProperty(prop)) {
+                this[prop] = conf[prop];
+            }
         }
 
         //store event queue
