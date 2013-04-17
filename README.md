@@ -27,24 +27,24 @@
 ###用法
 是的，这个模型还只是实现了基本的功能，那么我们可以通过一个例子来看看它的用法
     
-    //用户会议状态模型
+    //模型
     var Say = new StateMachie({
       trigger: $(btn)
     });
 
-    //获得信息状态
+    //显示1
     Say.add('say-one', function sayOne() {
       alert(1);
       this.active('say-helloworld');
     });
 
-    //显示信息状态
+    //显示hello world
     Say.add('say-helloworld', function sayHelloWorld() {
       alert('hello world');
       this.active('say-hello');
     });
 
-    //隐藏信息状态
+    //显示你好
     Say.add('say-hello', function sayHello() {
       alert('你好');
       this.active('say-one');
@@ -57,6 +57,7 @@
     Say.trigger.on('click', $.proxy(function(){
       this.exec();
     }, Say));
+    
 这就是通过状态来控制流程的状态机，在更复杂的应用中它会很好的完成任务，具体更多的用法参见手册
 
 ###手册
