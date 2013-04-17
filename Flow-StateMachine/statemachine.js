@@ -8,6 +8,7 @@
 
         //init
         for ( var prop in conf ) {
+            if ( conf.hasOwnProperty(prop)) continue;
             this[prop] = conf[prop];
         }
 
